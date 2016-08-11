@@ -1,0 +1,34 @@
+#######################################
+# Syntax Coloring Map For Calculus
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+Cache	KEYWORD1
+Differentiator	KEYWORD1
+Integrator	KEYWORD1
+LowPass	KEYWORD1
+PID	KEYWORD1
+Quadratic	KEYWORD1
+RateLimiter	KEYWORD1
+TimeBase	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+setTimeStep	KEYWORD2		# TimeBase
+getTimeStep	KEYWORD2		# TimeBase
+getTime	KEYWORD2			# TimeBase
+update	KEYWORD2			# TimeBase, Cache
+getSamples	KEYWORD2		# Cache
+getNumSamples	KEYWORD2	# Cache
+step	KEYWORD2			# Differentiator, Integrator, LowPass, PID
+solve	KEYWORD2			# Quadratic
+deriv	KEYWORD2			# Quadratic
+integ	KEYWORD2			# Quadratic
+eval	KEYWORD2			# RateLimiter
+
+#######################################
+# Constants (LITERAL1)
+#######################################
