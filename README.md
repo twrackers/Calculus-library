@@ -33,7 +33,7 @@ A Quadratic object, when given three samples equally spaced in time, solves for 
 A RateLimiter object echoes its input values to its output, with the restriction that the output's rate of change will be limited, rising and falling, to a rate specified when calling the constructor.
 
 ### TimeBase
-The TimeBase class has all static (class-scope) methods and private constructors, so it's effectively a "singleton" where only one instance can exist.  This has the benefit of making the single TimeBase object accessible to all other objects which require it.  Classes which depend on the TimeBase are:
+The TimeBase class has all static (class-scope) methods and private constructors, so it's effectively a "singleton" where only one instance can exist.  This has the benefit of making the single TimeBase object accessible to all other objects which require it.  Classes which depend directly on the TimeBase are:
 - Differentiator
 - Integrator
 - RateLimiter
