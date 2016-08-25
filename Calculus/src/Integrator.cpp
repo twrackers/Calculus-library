@@ -9,8 +9,7 @@ Integrator::Integrator(double yInitial) :
 
 double Integrator::step(double y)
 {
-  m_cache.update(y);
-  double* yv = m_cache.getSamples();
+  double* yv = m_cache.step(y);
   double& y0 = *yv;
   double& ym1 = *(yv + 1);
   double& ym2 = *(yv + 2);
@@ -18,4 +17,3 @@ double Integrator::step(double y)
   m_yValue += m_quad.integ() * TimeBase::getTimeStep();
   return m_yValue;
 }
-
