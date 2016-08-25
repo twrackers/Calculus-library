@@ -9,7 +9,7 @@ class RateLimiter
     
   public:
     RateLimiter(double limit);
-    double eval(double u);
+    double step(double u);
 };
 
 #endif
