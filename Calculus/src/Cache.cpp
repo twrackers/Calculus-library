@@ -25,7 +25,7 @@ const byte Cache::getNumSamples() const
   return m_NumSamples;
 }
 
-void Cache::update(double yVal)
+double* Cache::step(double yVal)
 {
   // Point dp to last cached sample.
   double* dp = m_Samples + m_NumSamples - 1;
@@ -38,5 +38,7 @@ void Cache::update(double yVal)
   }
   // Cache current value.
   *dp = yVal;
+  // Return cached values.
+  return m_Samples;
 }
 
