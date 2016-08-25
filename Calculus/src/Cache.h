@@ -14,7 +14,7 @@ class Cache
     virtual ~Cache();
     double* getSamples() const;
     const byte getNumSamples() const;
-    void update(double yVal);
+    double* step(double yVal);
 };
 
 #endif
