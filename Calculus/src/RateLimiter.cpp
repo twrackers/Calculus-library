@@ -6,7 +6,7 @@ RateLimiter::RateLimiter(double limit) :
 {
 }
 
-double RateLimiter::eval(double u)
+double RateLimiter::step(double u)
 {
   double dt = TimeBase::getTimeStep();
   double rate = (u - m_prev) / dt;
