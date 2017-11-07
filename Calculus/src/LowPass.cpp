@@ -1,8 +1,8 @@
 #include <Arduino.h>
 #include "LowPass.h"
 
-LowPass::LowPass(double tau, double yInitial) :
-  m_integ(Integrator(yInitial)), m_gain(1.0 / tau)
+LowPass::LowPass(const TimeStep& dt, double tau, double yInitial) :
+  m_integ(Integrator(dt, yInitial)), m_gain(1.0 / tau)
 {
 }
 

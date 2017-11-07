@@ -1,6 +1,7 @@
 #ifndef _LOWPASS__H_
 #define _LOWPASS__H_
 
+#include "TimeStep.h"
 #include "Integrator.h"
 
 class LowPass
@@ -11,7 +12,7 @@ class LowPass
     double m_y;
     
   public:
-    LowPass(double tau, double yInitial = 0.0);
+    LowPass(const TimeStep& dt, double tau, double yInitial = 0.0);
     double step(double u);
 };
 

@@ -1,6 +1,7 @@
 #ifndef _PID__H_
 #define _PID__H_
 
+#include "TimeStep.h"
 #include "Integrator.h"
 #include "Differentiator.h"
 
@@ -13,11 +14,11 @@ class PID
     bool m_useP;
     bool m_useI;
     bool m_useD;
-    Integrator integ;
-    Differentiator deriv;
+    Integrator m_integ;
+    Differentiator m_deriv;
 
   public:
-    PID(double p, double i, double d);
+    PID(const TimeStep& dt, double p, double i, double d);
     double step(double u);
 };
 

@@ -1,14 +1,14 @@
 #include "RateLimiter.h"
-#include "TimeBase.h"
+#include "TimeStep.h"
 
-RateLimiter::RateLimiter(double limit) :
-  m_limit(limit), m_prev(0.0)
+RateLimiter::RateLimiter(const TimeStep& dt, double limit) :
+  m_dt(dt), m_limit(limit), m_prev(0.0)
 {
 }
 
 double RateLimiter::step(double u)
 {
-  double dt = TimeBase::getTimeStep();
+  const double dt = m_dt.getTimeStep();
   double rate = (u - m_prev) / dt;
   double y;
   if (rate > m_limit) {
