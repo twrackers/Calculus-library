@@ -17,14 +17,22 @@ TimeBase	KEYWORD1
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
-getTimeStep	KEYWORD2	# TimeBase
-getTime	KEYWORD2	# TimeBase
-getSamples	KEYWORD2	# Cache
-getNumSamples	KEYWORD2	# Cache
-step	KEYWORD2	# TimeBase, Cache, Differentiator, Integrator, LowPass, PID, RateLimiter
-solve	KEYWORD2	# Quadratic
-deriv	KEYWORD2	# Quadratic
-integ	KEYWORD2	# Quadratic
+# TimeBase
+getTimeStep	KEYWORD2
+# TimeBase
+getTime	KEYWORD2
+# Cache
+getSamples	KEYWORD2
+# Cache
+getNumSamples	KEYWORD2
+# TimeBase, Cache, Differentiator, Integrator, LowPass, PID, RateLimiter
+step	KEYWORD2
+# Quadratic
+solve	KEYWORD2
+# Quadratic
+deriv	KEYWORD2
+# Quadratic
+integ	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
