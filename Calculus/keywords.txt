@@ -12,27 +12,21 @@ LowPass	KEYWORD1
 PID	KEYWORD1
 Quadratic	KEYWORD1
 RateLimiter	KEYWORD1
-TimeBase	KEYWORD1
+TimeStep	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
-# TimeBase
-getTimeStep	KEYWORD2
-# TimeBase
-getTime	KEYWORD2
-# Cache
-getSamples	KEYWORD2
-# Cache
-getNumSamples	KEYWORD2
-# TimeBase, Cache, Differentiator, Integrator, LowPass, PID, RateLimiter
-step	KEYWORD2
-# Quadratic
-solve	KEYWORD2
-# Quadratic
-deriv	KEYWORD2
-# Quadratic
-integ	KEYWORD2
+getTimeStep	KEYWORD2	# TimeStep
+getTimeMsec	KEYWORD2	# TimeStep
+getTimeUsec	KEYWORD2	# TimeStep
+getSamples	KEYWORD2	# Cache
+getNumSamples	KEYWORD2	# Cache
+step	KEYWORD2	# Cache, Differentiator, Integrator, LowPass, PID, RateLimiter
+reset KEYWORD2  # Integrator
+solve	KEYWORD2	# Quadratic
+deriv	KEYWORD2	# Quadratic
+integ	KEYWORD2	# Quadratic
 
 #######################################
 # Constants (LITERAL1)

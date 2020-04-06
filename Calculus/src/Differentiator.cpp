@@ -1,6 +1,5 @@
 #include <Arduino.h>
 #include "Differentiator.h"
-#include "TimeStep.h"
 
 Differentiator::Differentiator(const TimeStep& dt) : m_dt(dt), m_cache(Cache(3))
 {

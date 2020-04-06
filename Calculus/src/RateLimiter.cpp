@@ -1,5 +1,4 @@
 #include "RateLimiter.h"
-#include "TimeStep.h"
 
 RateLimiter::RateLimiter(const TimeStep& dt, double limit) :
   m_dt(dt), m_limit(limit), m_prev(0.0)
