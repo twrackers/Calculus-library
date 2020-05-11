@@ -21,8 +21,7 @@ double Integrator::step(double y)
 void Integrator::reset()
 {
   m_yValue = 0.0;
-  double* p = m_cache.getSamples();
   for (byte i = 0; i < m_cache.getNumSamples(); ++i) {
-    *p++ = 0.0;
+    m_cache.step(0.0);
   }
 }

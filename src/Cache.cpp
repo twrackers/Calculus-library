@@ -10,11 +10,6 @@ Cache::Cache(const byte numSamples, const double initValue) :
   }
 }
 
-Cache::~Cache()
-{
-  delete [] m_Samples;
-}
-
 double* Cache::getSamples() const
 {
   return m_Samples;

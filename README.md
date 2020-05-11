@@ -1,26 +1,23 @@
 # Calculus-library
-Arduino library to provide basic calculus functions, including integral and derivative, for fixed-step sampled data.
+This library provides basic calculus functions, including integral and derivative, for fixed-step sampled data.
 
-## Basics
-The classes in this repository are intended to perform basic calculus-like functions when a function defining data points is not available, only equally-spaced samples from either sensor inputs or calculations.  A variation of Simpson's Rule is used for the integral, fitting a quadratic to each sample point and the two points before it.  Once the quadratic is solved, both the area between the two most recent points (integral), and the slope at the latest point (derivative), are calculated directly.
+## Overview
+The classes in this library are intended to perform basic calculus-like functions when only values equally spaced in time are available, rather than a function defining the data points.  The typical use case is when the input values come from a sensor being sampled periodically.  A variation of Simpson's Rule is used for the integral, fitting a quadratic to each sample point and the two points before it.  Once the quadratic is solved, both the area between the two most recent points (integral), and the slope at the latest point (derivative), are calculated directly.
 
 ## Classes
-This section describes all the classes, listed in alphabetical order.  You will probably be most interested in:
-- TimeStep
-- Differentiator
-- Integrator
-- RateLimiter
+This section briefly describes each of the classes in this library.
 
 ### TimeStep
 The TimeStep class defines a time interval (in seconds) which is required by the following classes.
-- Differentiator
-- Integrator
-- LowPass (uses Integrator)
-- PID (uses Integrator and Differentiator)
-- RateLimiter
+
+* Differentiator
+* Integrator
+* LowPass (uses Integrator)
+* PID (uses Integrator and Differentiator)
+* RateLimiter
 
 ### Cache
-A Cache object maintains a history of the last N samples of an input variable, where N is specified when calling the constructor.  A Cache of 3 is used internally by each Differentiator or Integrator object.  You could also use a Cache as the basis for a running-average class.
+A Cache object maintains a history of the last *N* samples of an input variable, where *N* is specified when calling the constructor.  A Cache of size 3 is used internally by each Differentiator and Integrator object.  You can also use a Cache for other purposes, such as the basis for a running-average class.
 
 ### Differentiator
 A Differentiator object approximates the time derivative of the input values presented to it.  A TimeStep must be created beforehand to set the sampling time interval.
