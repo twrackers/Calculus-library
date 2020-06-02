@@ -1,6 +1,8 @@
 #ifndef _TIME_STEP__H_
 #define _TIME_STEP__H_
 
+#include <math.h>
+
 /**
  *  \headerfile TimeStep.h
  *  \class TimeStep
