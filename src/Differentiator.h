@@ -5,7 +5,8 @@
 #include "Quadratic.h"
 #include "Cache.h"
 
-/** \headerfile Differentiator.h
+/** 
+ *  \headerfile Differentiator.h
  *  \class Differentiator
  *  \brief Arduino class to calculate derivative from fixed-interval data points.
  *  \author Thomas W. Rackers, Ph.D.

@@ -3,7 +3,8 @@
 
 #include <Arduino.h>
 
-/** \headerfile Cache.h
+/** 
+ *  \headerfile Cache.h
  *  \class Cache
  *  \brief Arduino class to cache a fixed number of values in order.
  *  \author Thomas W. Rackers, Ph.D.
