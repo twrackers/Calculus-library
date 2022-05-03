@@ -3,16 +3,16 @@
 #include <Pulser.h>
 #include <StateMachine.h>
 
-#include "TimeStep.h"
-#include "LowPass.h"
-#include "RateLimiter.h"
+#include <TimeStep.h>
+#include <LowPass.h>
+#include <RateLimiter.h>
 
 const int sampleTime = 10;                        // msec
 const double dt = (double) sampleTime / 1000.0;   // sec
 //const double f = 2.0 / (2.0 * PI);                // Hz
 //const double omega = 2.0 * PI * f;                // rad/sec
-const double rateLimit = 5.0;                     // (y-units)/sec
-const double tau = 1.0 / rateLimit;               // sec
+const double rateLimit = 3.0;                     // (y-units)/sec
+const double tau = 0.4 / rateLimit;               // sec
 
 // 'pulser' will return true for 1 sec, false for 2 sec.
 Pulser pulser(1000, 2000);
@@ -57,4 +57,3 @@ void loop()
     Serial.println(z); 
   }
 }
-
