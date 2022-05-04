@@ -21,7 +21,7 @@
  *  per unit of time.  So the action of a RateLimiter object mimics that of slew
  *  rate limiting in a circuit.  More information on this can be found at
  *  <a href="https://en.wikipedia.org/wiki/Slew_rate">
- *  en.wikipedia.org/wili/Slew_rate</a>.
+ *  en.wikipedia.org/wiki/Slew_rate</a>.
  */
 class RateLimiter
 {
