@@ -45,10 +45,10 @@ void loop()
     double r = pulser.read() ? 1.0 : 0.0;
     // Do a low-pass filter on the input.
     double y = lpf.step(r);
-    // Do a rate-limiter on the input.
-    double z = limiter.step(r);
+    // Do a rate-limiter on the LPF output.
+    double z = limiter.step(y);
     // Print the results.
-    // Use 'Tools => Serial Plotter' or
+    // Use 'Tools => Serial Monitor' or
     // 'Tools => Serial Plotter' to see the output.
     Serial.print(r);
     Serial.print(" ");
