@@ -12,7 +12,7 @@ const double dt = (double) sampleTime / 1000.0;   // sec
 //const double f = 2.0 / (2.0 * PI);                // Hz
 //const double omega = 2.0 * PI * f;                // rad/sec
 const double rateLimit = 3.0;                     // (y-units)/sec
-const double tau = 0.4 / rateLimit;               // sec
+const double tau = 0.5 / rateLimit;               // sec
 
 // 'pulser' will return true for 1 sec, false for 2 sec.
 Pulser pulser(1000, 2000);
