@@ -12,10 +12,11 @@
  *  
  *  This class performs a rate-limiting function on fixed-rate data values.
  *  
- *  A rate limiter outputs the same value that is input to it, *as long as the rate of
- *  change of the input value does not exceed a preset limit*.  If the input value's
- *  rate of change exceeds the limit, the output value will change in the direction
- *  that follows the input, but only at the preset rate.
+ *  A rate limiter outputs the same value that is input to it, *as long as the absolute
+ *  value of the rate of change of the input value does not exceed a preset limit*.
+ *  If the input value's rate of change exceeds the limit, either positive or negative,
+ *  the output value will change in the direction that follows the input, but only at
+ *  the preset rate.
  *  
  *  In electronics, the term *slew rate* is used to define the change in some signal
  *  per unit of time.  So the action of a RateLimiter object mimics that of slew
