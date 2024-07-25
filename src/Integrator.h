@@ -10,7 +10,7 @@
  *  \class Integrator
  *  \brief Arduino class to calculate integral from fixed-interval data points.
  *  \author Thomas W. Rackers, Ph.D.
- *  \version 1.1.1
+ *  \version 1.2.0
  *  
  *  This class performs a numerical integration from data points which are sampled
  *  at equal intervals in time.  An Integrator object caches the 3 most recent data
@@ -33,6 +33,7 @@ class Integrator
 {
   private:
     const TimeStep& m_dt;   //!< reference to TimeStep object
+    const double m_yInit;   //!< initial/reset output value
     double m_yValue;        //!< current integrated value (area under curve)
     Cache m_cache;          //!< Cache object, holds 3 most recent samples
     Quadratic m_quad;       //!< Quadratic object to fit cached samples
@@ -67,7 +68,7 @@ class Integrator
      *  \brief Resets the Integrator.
      *  
      *  \details This method clears the internal cache of data samples and resets the
-     *  current integral value to zero.
+     *  current integral value to the initial value.
      */
     void reset();
 };

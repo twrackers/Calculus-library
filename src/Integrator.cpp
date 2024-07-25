@@ -1,9 +1,8 @@
 #include <Arduino.h>
 #include "Integrator.h"
-//#include "TimeBase.h"
 
 Integrator::Integrator(const TimeStep& dt, double yInitial) : 
-  m_dt(dt), m_yValue(yInitial), m_cache(Cache(3))
+  m_dt(dt), m_yInit(yInitial), m_yValue(yInitial), m_cache(Cache(3))
 {
 }
 
@@ -20,8 +19,8 @@ double Integrator::step(double y)
 
 void Integrator::reset()
 {
-  m_yValue = 0.0;
+  m_yValue = m_yInit;
   for (byte i = 0; i < m_cache.getNumSamples(); ++i) {
-    m_cache.step(0.0);
+    m_cache.step(m_yInit);
   }
 }
