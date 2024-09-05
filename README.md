@@ -32,6 +32,10 @@ A *Cache* object maintains a history of the last *N* samples of an input variabl
 
 A *Differentiator* object approximates the time derivative of the input values presented to it.  A *TimeStep* must be created beforehand to set the sampling time interval.
 
+### HighPass ###
+
+A *HighPass* object performs a first-order high-pass filtering of the input values presented to it.  A *HighPass* object is constructed with a time constant, in the same units as the *TimeStep*.  A *TimeStep* must be created beforehand to set the sampling time interval.
+
 ### Integrator ###
 
 An *Integrator* object approximates the time integral of the input values presented to it.  A *TimeStep* must be created beforehand to set the sampling time interval.
