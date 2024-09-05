@@ -9,7 +9,7 @@
  *  \class LowPass
  *  \brief Arduino class to implement 1<sup>st</sup>-order low-pass filter.
  *  \author Thomas W. Rackers, Ph.D.
- *  \version 1.1.0
+ *  \version 1.2.0
  *  
  *  This class performs a numerical first-order low-pass filtering of data
  *  points which are sampled at equal intervals in time.
