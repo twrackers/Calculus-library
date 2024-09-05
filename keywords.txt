@@ -7,6 +7,7 @@
 #######################################
 Cache	KEYWORD1
 Differentiator	KEYWORD1
+HighPass  KEYWORD1
 Integrator	KEYWORD1
 LowPass	KEYWORD1
 PID	KEYWORD1
@@ -22,7 +23,7 @@ getTimeMsec	KEYWORD2	# TimeStep
 getTimeUsec	KEYWORD2	# TimeStep
 getSamples	KEYWORD2	# Cache
 getNumSamples	KEYWORD2	# Cache
-step	KEYWORD2	# Cache, Differentiator, Integrator, LowPass, PID, RateLimiter
+step	KEYWORD2	# Cache, Differentiator, HighPass, Integrator, LowPass, PID, RateLimiter
 reset KEYWORD2  # Integrator
 solve	KEYWORD2	# Quadratic
 deriv	KEYWORD2	# Quadratic
