@@ -7,7 +7,7 @@
 #######################################
 Cache	KEYWORD1
 Differentiator	KEYWORD1
-HighPass  KEYWORD1
+HighPass	KEYWORD1
 Integrator	KEYWORD1
 LowPass	KEYWORD1
 PID	KEYWORD1
