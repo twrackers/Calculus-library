@@ -16,7 +16,7 @@ The *TimeStep* class defines a time interval (in seconds) which is required by t
 
 - *Differentiator*
 - *Integrator*
-- *LowPass* (uses *Integrator*)
+- *LowPass* and *HighPass* (use *Integrator*)
 - *PID* (uses *Integrator* and *Differentiator*)
 - *RateLimiter*
 
