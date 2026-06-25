@@ -37,6 +37,7 @@ class Integrator
     double m_yValue;        //!< current integrated value (area under curve)
     Cache m_cache;          //!< Cache object, holds 3 most recent samples
     Quadratic m_quad;       //!< Quadratic object to fit cached samples
+    bool m_primed;          //!< cache was primed upon reset
     
   public:
     /**
