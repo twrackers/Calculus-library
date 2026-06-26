@@ -11,7 +11,7 @@ double Integrator::step(double y)
 {
   double* yv;
   if (m_primed) {
-    // Usually add one value to cche.
+    // Usually add one value to cache.
     yv = m_cache.step(y);
   } else {
     // Upon reset, stuff cache with same value.
