@@ -10,7 +10,7 @@
  *  \class Integrator
  *  \brief Arduino class to calculate integral from fixed-interval data points.
  *  \author Thomas W. Rackers, Ph.D.
- *  \version 1.2.0
+ *  \version 1.3.0
  *  
  *  This class performs a numerical integration from data points which are sampled
  *  at equal intervals in time.  An Integrator object caches the 3 most recent data
