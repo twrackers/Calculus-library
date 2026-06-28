@@ -55,6 +55,13 @@ class LowPass
      *  \return Filter output
      */
     double step(double u);
+    
+    /**
+     *  \brief Resets the filter.
+     *  
+     *  \details This method resets the integrator used by the filter object..
+     */
+    void reset();
 };
 
 #endif

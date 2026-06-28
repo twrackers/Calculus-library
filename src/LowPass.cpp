@@ -12,3 +12,7 @@ double LowPass::step(double u)
   return m_y;
 }
 
+void LowPass::reset()
+{
+  m_integ.reset();
+}
